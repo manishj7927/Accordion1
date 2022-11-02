@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .box {
+            margin: 10px 50px;
+
+            padding: 10px;
+            border: 2px solid blue;
+            border-radius: 20px;
+            background-color: rgb(208, 21, 21);
+
+        }
+
+        p {
+            display: none;
+        }
+
+        /* .active {
+            display: block;
+            color: red;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="box">
+            <h1>Accodion1</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magni itaque, dolores pariatur ab
+                inventore tempora obcaecati, illum deleniti labore dolorem eaque nihil, exercitationem molestiae iusto
+                maxime. Aspernatur, quod perferendis?
+            </p>
+        </div>
+        <div class="box">
+            <h1>Accodion2</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magni itaque, dolores pariatur ab
+                inventore tempora obcaecati, illum deleniti labore dolorem eaque nihil, exercitationem molestiae iusto
+                maxime. Aspernatur, quod perferendis?
+            </p>
+
+        </div>
+        <div class="box">
+
+            <h1>Accodion3</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magni itaque, dolores pariatur ab
+                inventore tempora obcaecati, illum deleniti labore dolorem eaque nihil, exercitationem molestiae iusto
+                maxime. Aspernatur, quod perferendis?
+            </p>
+        </div>
+        <div class="box">
+
+            <h1>Accodion4</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magni itaque, dolores pariatur ab
+                inventore tempora obcaecati, illum deleniti labore dolorem eaque nihil, exercitationem molestiae iusto
+                maxime. Aspernatur, quod perferendis?
+            </p>
+        </div>
+
+
+    </div>
+    <script>
+        let heading = document.querySelectorAll(".box h1 ");
+        let para = document.querySelectorAll("p");
+        heading.forEach((current) => {
+            current.onclick = () => {
+                if (current.nextElementSibling.style.dispiay === "block") {
+                    current.nextElementSibling.style.dispiay = "none"
+                }
+                else {
+                    para.forEach((par) => {
+                        if (par.style.display === "block") {
+                            par.style.display = "none"
+                        }
+                    });
+                    current.nextElementSibling.style.dispiay = "block"
+                }
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>
